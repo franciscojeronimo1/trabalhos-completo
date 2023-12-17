@@ -214,9 +214,10 @@ html {
 
 
 .slider {
+    width: 50%;
     margin: 0 auto;
-    width: 500px;
-    height: 400px;
+    max-width: 500px; 
+    min-width: 100px;
     overflow: hidden;
 }
 
