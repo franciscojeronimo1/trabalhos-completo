@@ -425,9 +425,15 @@ span a {
 
 .slider {
     margin: 0 auto;
-    width: 500px;
-    height: 400px;
+    width: 50%; /* Ajuste a porcentagem conforme necessário */
+    max-width: 500px; /* Opcional: define a largura máxima para evitar que a div fique muito larga */
+    min-width: 100px; /* Opcional: define a largura mínima para evitar que a div fique muito estreita */
+    margin: 0 auto; 
     overflow: hidden;
+}
+
+.manual-navigation {
+    display: none;
 }
 
 .slides {
