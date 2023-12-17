@@ -425,7 +425,7 @@ span a {
 
 .slider {
     margin: 0 auto;
-    width: 50%; /* Ajuste a porcentagem conforme necessário */
+    width: 70%; /* Ajuste a porcentagem conforme necessário */
     max-width: 500px; /* Opcional: define a largura máxima para evitar que a div fique muito larga */
     min-width: 100px; /* Opcional: define a largura mínima para evitar que a div fique muito estreita */
     margin: 0 auto; 
@@ -586,6 +586,9 @@ span a {
          width: 100%;
      }
 
+     .cardapio h2 {
+        font-size: 2em;
+     }
 .itens-cardapio h4 {
         margin-left: 12rem;
     }
