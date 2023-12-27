@@ -71,6 +71,9 @@
     margin-top: 16px;
     font-size: 34px;
   }
+  .header-logo {
+    display: none;
+  }
   .header-button {
     display: none;
   }
