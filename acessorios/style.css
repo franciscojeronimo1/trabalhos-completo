@@ -92,7 +92,7 @@
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #7dc2fa), url("./assets/celular-do-zero.png");
+  background-image: linear-gradient(to bottom, rgba(6, 9, 12, 0.1), #03090e), url("./assets/celular-do-zero.png");
   left: 0;
   top: 0;
   width: 100%;
@@ -170,7 +170,7 @@
   }
 }
 .services {
-  background-color: #73b1e2;
+  background-color: #040a10;
   color: #232224;
   display: flex;
   flex-direction: column;
@@ -184,6 +184,10 @@
   text-align: center;
   font-size: 38px;
   margin-bottom: 14px;
+}
+
+h2 {
+  color: white;
 }
 
 .services-content p {
