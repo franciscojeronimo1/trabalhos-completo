@@ -395,3 +395,10 @@ h2 {
  #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: black;
  }
+
+ .footer-icons {
+    i {
+        color: #d94140;
+        animation: translateY 0.8s infinite alternate;
+    }
+ }

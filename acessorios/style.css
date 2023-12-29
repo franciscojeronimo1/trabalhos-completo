@@ -442,6 +442,11 @@ h2 {
   background-color: black;
 }
 
+.footer-icons i {
+  color: #d94140;
+  animation: translateY 0.8s infinite alternate;
+}
+
 body {
   font-family: "Sora" sans-serif;
   width: 100%;
