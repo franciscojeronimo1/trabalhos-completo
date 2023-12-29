@@ -339,8 +339,8 @@ h2 {
 }
 .slider {
   margin: 0 auto;
-  width: 500px;
-  height: 400px;
+  width: 50vh;
+  height: 50vh;
   overflow: hidden;
   background-color: #040a10;
 }
