@@ -8,4 +8,4 @@ https://franciscojeronimo1.github.io/trabalhos-completo/Delivery
 
 ## Site de acessórios 
 
-https://franciscojeronimo1.github.io/trabalhos-completo/acessorio
+https://franciscojeronimo1.github.io/trabalhos-completo/acessorios
