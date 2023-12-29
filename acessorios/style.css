@@ -242,12 +242,39 @@ h2 {
   border: 0;
 }
 
+.trabalhos {
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.trabalhos img {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .haircuts {
     flex-direction: column;
   }
   .haircut img {
     max-width: 540px;
+  }
+  .trablhos {
+    width: 50%;
+  }
+  .trabalhos img {
+    width: 60%;
   }
 }
 .footer {
