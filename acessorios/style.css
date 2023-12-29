@@ -24,6 +24,11 @@
   animation: translateY 0.8s infinite alternate;
 }
 
+.header-icons i {
+  color: #d94140;
+  animation: translateY 0.8s infinite alternate;
+}
+
 @keyframes translateY {
   from {
     transform: translateY(0) scale(1);
