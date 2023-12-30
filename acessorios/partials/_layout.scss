@@ -94,7 +94,10 @@
     .hero h1 {
         font-size: 24px;
     }
+
+      
 }
+
 
 
 // about --------
@@ -394,6 +397,15 @@ h2 {
 
  #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: black;
+ }
+
+ @media screen and (max-width:400) {
+    .slider {
+        
+        width: 50px;
+        
+         
+    }
  }
 
  .footer-icons {

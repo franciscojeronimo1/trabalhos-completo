@@ -442,6 +442,11 @@ h2 {
   background-color: black;
 }
 
+@media screen and (max-width: 400) {
+  .slider {
+    width: 50px;
+  }
+}
 .footer-icons i {
   color: #d94140;
   animation: translateY 0.8s infinite alternate;
