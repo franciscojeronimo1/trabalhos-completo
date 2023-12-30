@@ -442,9 +442,9 @@ h2 {
   background-color: black;
 }
 
-@media screen and (max-width: 400) {
+@media screen and (max-width: 768px) {
   .slider {
-    width: 50px;
+    display: none;
   }
 }
 .footer-icons i {

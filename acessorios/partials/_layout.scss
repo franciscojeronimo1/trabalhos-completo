@@ -226,6 +226,8 @@ h2 {
     .trabalhos img {
         width: 60%;
     }
+
+  
 }
 
 
@@ -399,14 +401,12 @@ h2 {
     background-color: black;
  }
 
- @media screen and (max-width:400) {
-    .slider {
-        
-        width: 50px;
-        
-         
+@media screen and (max-width: 768px) {
+    .slider  {
+        display: none; 
     }
- }
+}
+ 
 
  .footer-icons {
     i {
