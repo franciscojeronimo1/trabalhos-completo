@@ -9,6 +9,8 @@ const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
 
+
+
 let cart = [];
 
 cartBtn.addEventListener("click", function () {
@@ -47,6 +49,7 @@ function addToCart(name, price) {
       name,
       price,
       quantity: 1,
+
     })
   }
 
@@ -131,47 +134,56 @@ addressInput.addEventListener("input", function (event) {
 })
 
 // finalizar pedido
-checkoutBtn.addEventListener("click", function () {
 
-  const isOpen = checkRestaurantOpen()
+checkoutBtn.addEventListener("click", function () {
+  const isOpen = checkRestaurantOpen();
+
   /* if (!isOpen) {
-     Toastify({
-       text: "Ops o restaurante está fechado!",
-       duration: 3000,
-       close: true,
-       gravity: "top", // `top` or `bottom`
-       position: "right", // `left`, `center` or `right`
-       stopOnFocus: true, // Prevents dismissing of toast on hover
-       style: {
-         background: "#ef4444",
-       },
-     }).showToast()
-     return;
-   } */
+    Toastify({
+      text: "Ops o restaurante está fechado!",
+      duration: 3000,
+      close: true,
+      gravity: "top", // top or bottom
+      position: "right", // left, center or right
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "#ef4444",
+      },
+    }).showToast()
+    return;
+  } */
 
   if (cart.length === 0) return;
+
   if (addressInput.value === "") {
-    addressWarn.classList.remove("hidden")
-    addressInput.classList.add("border-red-500")
-    return
+    addressWarn.classList.remove("hidden");
+    addressInput.classList.add("border-red-500");
+    return;
   }
 
-  // enviar para api whats
-  const carItems = cart.map((item) => {
-    return (
-      `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)}  |`
-    )
-  }).join("")
+  // Monta os itens do pedido
+  const cartItems = cart.map((item) => {
+    return `${item.name} (Qtd: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
+  }).join("\n");
 
-  const message = encodeURIComponent(carItems)
-  const phone = "35999312337"
+  // Calcula o total do pedido
+  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2);
 
-  window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+  // Cria a mensagem com os itens, total e endereço
+  const message = encodeURIComponent(
+    `*Pedido:*\n${cartItems}\n\n*Total: R$ ${total}*\n*Endereço:* ${addressInput.value}`
+  );
 
+  const phone = "35999312337"; // Substituir pelo número correto
+
+  // Abre o WhatsApp com a mensagem
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+
+  // Limpa o carrinho e atualiza o modal
   cart = [];
-  updateCartModal()
+  updateCartModal();
+});
 
-})
 
 function checkRestaurantOpen() {
   const data = new Date();
@@ -189,3 +201,15 @@ if (isOpen) {
   spanItem.classList.remove("bg-green-600")
   spanItem.classList.add("bg-red-500")
 }
+
+function sanitizeInput(input) {
+  return input.replace(/[<>&"]/g, "");
+}
+const sanitizedAddress = sanitizeInput(addressInput.value);
+
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && cartModal.style.display === "flex") {
+    cartModal.style.display = "none";
+  }
+});
