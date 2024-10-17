@@ -8,6 +8,14 @@ const closeModalBtn = document.getElementById("close-modal-btn")
 const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
+const pizzaPrices = {
+  calabresa: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  frango: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  portuguesa: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  bacon: { pequena: 24, media: 34, grande: 44, familia: 54 },
+  brocolis: { pequena: 23, media: 33, grande: 43, familia: 53 }
+};
+
 
 
 
@@ -60,42 +68,37 @@ function addToCart(name, price) {
 
 function updateCartModal() {
   cartItemsContainer.innerHTML = "";
-  let total = 0
+  let total = 0;
 
   cart.forEach(item => {
-    const cartItemElement = document.createElement("div")
-    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+    const cartItemElement = document.createElement("div");
+    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
     cartItemElement.innerHTML = `
-    <div class="flex items-center justify-between"> 
-     <div> 
-      <p class="font-bold">${item.name}</p>
-      <p>Qtd: ${item.quantity}</p>
-      <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
-    </div>
-    
-   
-    <button class="remove-from-cart-btn bg-red-500 p-2 rounded" data-name="${item.name}">
-      Remover
-    </button>
-    
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="font-bold">${item.name}</p>
+          <p>Qtd: ${item.quantity}</p>
+          <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+        </div>
+        <button class="remove-from-cart-btn bg-red-500 p-2 rounded" data-name="${item.name}">
+          Remover
+        </button>
+      </div>
+    `;
 
-    </div>
-
-    `
     total += item.price * item.quantity;
-
-    cartItemsContainer.appendChild(cartItemElement)
-  })
+    cartItemsContainer.appendChild(cartItemElement);
+  });
 
   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"
   });
 
-  cartCounter.innerHTML = cart.length
-
+  cartCounter.innerHTML = cart.length;
 }
+
 
 
 cartItemsContainer.addEventListener("click", function (event) {
@@ -136,50 +139,28 @@ addressInput.addEventListener("input", function (event) {
 // finalizar pedido
 
 checkoutBtn.addEventListener("click", function () {
-  const isOpen = checkRestaurantOpen();
-
-  /* if (!isOpen) {
-    Toastify({
-      text: "Ops o restaurante está fechado!",
-      duration: 3000,
-      close: true,
-      gravity: "top", // top or bottom
-      position: "right", // left, center or right
-      stopOnFocus: true, // Prevents dismissing of toast on hover
-      style: {
-        background: "#ef4444",
-      },
-    }).showToast()
-    return;
-  } */
-
-  if (cart.length === 0) return;
-
-  if (addressInput.value === "") {
-    addressWarn.classList.remove("hidden");
-    addressInput.classList.add("border-red-500");
-    return;
-  }
-
-  // Monta os itens do pedido
   const cartItems = cart.map((item) => {
     return `${item.name} (Qtd: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
   }).join("\n");
 
-  // Calcula o total do pedido
+  if (cart.length === 0) return;
+  if (addressInput.value === "") {
+    addressWarn.classList.remove("hidden")
+    addressInput.classList.add("border-red-500")
+    return
+  }
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2);
+  const paymentMethod = document.getElementById("payment-method").value;
 
-  // Cria a mensagem com os itens, total e endereço
   const message = encodeURIComponent(
-    `*Pedido:*\n${cartItems}\n\n*Total: R$ ${total}*\n*Endereço:* ${addressInput.value}`
+    `*Pedido:*\n${cartItems}\n\n*Total: R$ ${total}*\n*Endereço:* ${addressInput.value}\n*Forma de Pagamento:* ${paymentMethod}`
   );
 
-  const phone = "35999312337"; // Substituir pelo número correto
 
-  // Abre o WhatsApp com a mensagem
+
+  const phone = "35999865637";
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
-  // Limpa o carrinho e atualiza o modal
   cart = [];
   updateCartModal();
 });
@@ -188,7 +169,7 @@ checkoutBtn.addEventListener("click", function () {
 function checkRestaurantOpen() {
   const data = new Date();
   const hora = data.getHours();
-  return hora >= 18 && hora < 22;
+  return hora >= 18 && hora < 23;
 }
 
 const spanItem = document.getElementById("date-span")
@@ -213,3 +194,53 @@ document.addEventListener("keydown", function (event) {
     cartModal.style.display = "none";
   }
 });
+
+
+menu.addEventListener("click", function (event) {
+  if (event.target.id === "add-pizza-btn") {
+    const sabor1Select = document.getElementById("sabor-1");
+    const sabor2Select = document.getElementById("sabor-2");
+    const tamanhoSelect = document.getElementById("tamanho");
+    const flavorWarn = document.getElementById("flavor-warn");
+
+    const sabor1 = sabor1Select.value;
+    const sabor2 = sabor2Select.value;
+    const tamanho = tamanhoSelect.value;
+
+    // Validação: ambos os sabores e o tamanho precisam ser selecionados
+    if (!sabor1 || !sabor2 || !tamanho) {
+      flavorWarn.classList.remove("hidden");
+      return;
+    } else {
+      flavorWarn.classList.add("hidden");
+    }
+
+    // Obtém os preços dos dois sabores
+    const price1 = pizzaPrices[sabor1][tamanho];
+    const price2 = pizzaPrices[sabor2][tamanho];
+
+    // Determina o preço mais alto entre os dois sabores
+    const higherPrice = Math.max(price1, price2);
+
+    // Adiciona a pizza ao carrinho
+    addToCart(`${sabor1} / ${sabor2} - ${tamanho}`, higherPrice);
+  }
+});
+
+
+
+
+function addCart(name, price) {
+  const existingItem = cart.find(item => item.name === name);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ name, price, quantity: 1 });
+  }
+
+  updateCartModal();
+}
+
+
+

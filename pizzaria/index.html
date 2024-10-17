@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
+    <link rel="shortcut icon" href="./assets/fiveicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/output.css" />
     <link
       rel="stylesheet"
@@ -28,25 +28,26 @@
     <meta property="og:site_name" content="DevBurguer" />
 
 
-    <title>Dev Burguer</title>
+    <title>Claudia Delivery</title>
   </head>
 
   <body>
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
       <div class="w-full h-full flex flex-col justify-center items-center">
         <img
-          src="./assets//hamb-1.png"
+          src="./assets/pizza.png"
           alt="Logo DevBurguer"
-          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+          class="w-32 h-32
+           rounded-full shadow-lg hover:scale-110 duration-200"
         />
-        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Claudia Delivery</h1>
 
         <span class="text-white font-medium">
-          Rua dev 10, Campo Grande - MS</span
+          Santana do Jacaré</span
         >
 
         <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-          <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+          <span class="text-white font-medium">Seg á Dom - 18:00 as 23:00</span>
         </div>
       </div>
     </header>
@@ -55,63 +56,53 @@
       Conheça nosso menu
     </h2>
 
-    <!-- colocar um carrosel para mais variedades de sabores, usar 2xl:grid-cols-4 para deixar 4 hamburges ou para deixar 3 lg:grid-cols-3-->
+  
+
+    <!-- colocar um carrosel para mais variedades de sabores, usar 2xl:grid-cols-4 para deixar 4  ou para deixar 3 lg:grid-cols-3-->
     <div id="menu">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Tradicionais</h2>
       <main
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
       >
+     
         <!-- produtos-->
         <div class="flex gap-2">
           <img
-            src="./assets/hamb-1.png"
-            alt="Hamburguer Smash"
+            src="./assets/pizza.png"
+            alt="Calabresa"
             class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
           />
 
           <div>
-            <p class="font-bold">Hamburguer Smash</p>
+            <p class="font-bold">Calabresa</p>
             <p class="text-sm">
-              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
-              prato e maionese da casa.
+              Molho vermelho, Muçarela, Calabresa e Cebola.
             </p>
-
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 18.90</p>
-              <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Hanburguer Smash"
-                data-price="18.90"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+              <p class="font-bold ">Pequena R$40.00,  Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
+              
             </div>
           </div>
+
+          
         </div>
 
         <!-- produtos-->
         <div class="flex gap-2">
           <img
-            src="./assets/hamb-2.png"
+            src="./assets/pizza.png"
             alt="Hamburguer Duplo"
             class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
           />
 
           <div>
-            <p class="font-bold">Hamburguer Duplo</p>
+            <p class="font-bold">Frango com Catupiry</p>
             <p class="text-sm">
-              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
-              prato e maionese da casa.
+             Molho branco, Muçarela, Frango, Catupiry e milho.
             </p>
-
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 32.90</p>
-              <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer Duplo"
-                data-price="32.90"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+              <p class="font-bold ">Pequena R$40.00,  Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
+              
             </div>
           </div>
         </div>
@@ -119,59 +110,429 @@
         <!-- produtos-->
         <div class="flex gap-2">
           <img
-            src="./assets/hamb-3.png"
-            alt="Hamburguer Salad"
+            src="./assets/pizza.png"
+            alt="Muçarela"
             class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
           />
 
           <div>
-            <p class="font-bold">Hamburguer Salad</p>
+            <p class="font-bold">Muçarela</p>
             <p class="text-sm">
-              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
-              prato e maionese da casa.
+              Molho vermelho, Muçarela em Dobro.
             </p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 35.90</p>
-              <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer Salad"
-                data-price="35.90"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
+              <p class="font-bold ">Pequena R$40.00,  Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
+              
             </div>
           </div>
         </div>
 
-        <!-- produtos-->
-        <div class="flex gap-2">
-          <img
-            src="./assets/hamb-4.png"
-            alt="Hamburguer da casa"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-          />
+     <!-- produtos-->
+     <div class="flex gap-2">
+      <img
+        src="./assets/pizza.png"
+        alt="Portuguesa-tradicional"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
 
-          <div>
-            <p class="font-bold">Hamburguer da casa</p>
-            <p class="text-sm">
-              Pão levinho de fermentação natural da Trigou, burger 160g, queijo
-              prato e maionese da casa.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 30</p>
-              <button
-                class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                data-name="Hamburguer da casa"
-                data-price="30"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
+      <div>
+        <p class="font-bold">Portuguesa Tradicional</p>
+        <p class="text-sm">
+          Molho vermelho, Muçarela, Presunto, Calabresa, Cebola e ovo.
+        </p>
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold ">Pequena R$40.00,  Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
+          
         </div>
+      </div>
+
+    </div>
+
+    <!-- produtos-->
+    <div class="flex gap-2">
+      <img
+        src="./assets/pizza.png"
+        alt="moda da casa"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+      />
+
+      <div>
+        <p class="font-bold">Moda da Casa</p>
+        <p class="text-sm">
+          Molho vermelho, Presunto, Frango, Muçarela, Calabresa e milho.
+        </p>
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold ">Pequena R$40.00,  Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
+          
+        </div>
+      </div>
+
+      
+    </div>
+
+
+        
       </main>
+
+      </div>
+
+
+
+      <div id="menu">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Bacon/Alho</h2>
+        <main
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
+        >
+       
+          <!-- produtos-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/pizza.png"
+              alt="Portuguesa completa"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div>
+              <p class="font-bold">Portuguesa Completa</p>
+              <p class="text-sm">
+                Molho vermelho, Presunto, Muçarela, Calabresa, Cebola, Bacon, Palmito, Alho e Milho.
+              </p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold ">Pequena R$43.00,  Média R$48.00 <br> Grande R$55.00, Família R$70.00</p>
+                
+              </div>
+            </div>
+            </div>
+            
+                    <!-- produtos-->
+                    <div class="flex gap-2">
+                      <img
+                        src="./assets/pizza.png"
+                        alt="Frangolino"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                      />
+            
+                      <div>
+                        <p class="font-bold">Frangolino</p>
+                        <p class="text-sm">
+                          Molho Branco, Muçarela, Frango, Bacon, Palmito, Catupiry e Milho.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                          <p class="font-bold ">Pequena R$43.00,  Média R$48.00 <br> Grande R$55.00, Família R$70.00</p>
+                          
+                        </div>
+                      </div>
+                      </div>
+                    <!-- produtos-->
+                    <div class="flex gap-2">
+                      <img
+                        src="./assets/pizza.png"
+                        alt="Canadense"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                      />
+            
+                      <div>
+                        <p class="font-bold">Canadense</p>
+                        <p class="text-sm">
+                          Molho Branco, Lombinho, Muçarela, Bacon, Palmito e Cheddar.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                          <p class="font-bold ">Pequena R$43.00,  Média R$48.00 <br> Grande R$55.00, Família R$70.00</p>
+                          
+                        </div>
+                      </div>
+                      </div>
+          
+
+                      <!-- produtos-->
+                    <div class="flex gap-2">
+                      <img
+                        src="./assets/pizza.png"
+                        alt="Brócolis com Bacon"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                      />
+            
+                      <div>
+                        <p class="font-bold">Brócolis com Bacon</p>
+                        <p class="text-sm">
+                          Molho Vermelho, Muçarela, Brocolis, Bacon e Milho.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                          <p class="font-bold ">Pequena R$43.00,  Média R$48.00 <br> Grande R$55.00, Família R$70.00</p>
+                          
+                        </div>
+                      </div>
+                      </div>
+          
+                      <!-- produtos-->
+                    <div class="flex gap-2">
+                      <img
+                        src="./assets/pizza.png"
+                        alt="Bacon com Palmito"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                      />
+            
+                      <div>
+                        <p class="font-bold">Bacon com Palmito</p>
+                        <p class="text-sm">
+                          Molho Vermelho, Muçarela, Palmito e Bacon.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                          <p class="font-bold ">Pequena R$43.00,  Média R$48.00 <br> Grande R$55.00, Família R$70.00</p>
+                          
+                        </div>
+                      </div>
+                      </div>
+          
+                      
+          
+        </main>
+  
+        </div>
+
+
+        <div id="menu">
+          <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Queijos</h2>
+          <main
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
+          >
+         
+            <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="2 Queijos"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">2 Queijos</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela e Provolone.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$35.00,  Média R$40.00 <br> Grande R$45.00, Família R$55.00</p>
+                  
+                </div>
+              </div>
+              </div>
+
+                   <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="3 Queijos"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">3 Queijos</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela, Provolone e Parmesão.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$38.00,  Média R$43.00 <br> Grande R$48.00, Família R$60.00</p>
+                  
+                </div>
+              </div>
+              </div>
+
+                   <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="4 Queijos"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">4 Queijos</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela, Provolone, Parmesão e Catupiry.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$40.00,  Média R$48.00 <br> Grande R$55.00, Família R$70.00</p>
+                  
+                </div>
+              </div>
+              </div>
+
+                          <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="5 Queijos"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">5 Queijos</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela, Provolone, Parmesão, Catupiry e Cheddar.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$43.00,  Média R$50.00 <br> Grande R$58.00, Família R$75.00</p>
+                  
+                </div>
+              </div>
+              </div>
+         
+                                        <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="6 Queijos"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">6 Queijos</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela, Provolone, Parmesão, Catupiry, Cheddar, Queijo Prato e Creme de Queijo.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$45.00,  Média R$55.00 <br> Grande R$65.00, Família R$80.00</p>
+                  
+                </div>
+              </div>
+              </div>
+            
+                        
+            
+          </main>
+    
+          </div>
+
+
+        </main>
+  
+      </div>
+
+
+      <div id="menu">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Carnes</h2>
+        <main
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
+        >
+       
+          <!-- produtos-->
+          <div class="flex gap-2">
+            <img
+              src="./assets/pizza.png"
+              alt="Costela"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div>
+              <p class="font-bold">Costela</p>
+              <p class="text-sm">
+                Molho vermelho, Muçarela em Dobro, Costela, Champgnon, Cebola caramelizada e Barbecue.
+              </p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold ">Pequena R$45.00,  Média R$55.00 <br> Grande R$70.00, Família R$85.00</p>
+                
+              </div>
+            </div>
+            </div>
+
+            <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="Camarão"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">Camarão</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela, Parmesão, Especiarias, Camarão e Creme de Queijo.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$45.00,  Média R$55.00 <br> Grande R$70.00, Família R$85.00</p>
+                  
+                </div>
+              </div>
+              </div>     
+          
+                      
+          
+        </main>
+  
+        </div>
+
+        <div id="menu">
+          <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Vegetarianas</h2>
+          <main
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
+          >
+         
+            <!-- produtos-->
+            <div class="flex gap-2">
+              <img
+                src="./assets/pizza.png"
+                alt="Costela"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+              />
+    
+              <div>
+                <p class="font-bold">Vegana</p>
+                <p class="text-sm">
+                  Molho vermelho, Muçarela e alho poró.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                  <p class="font-bold ">Pequena R$38.00,  Média R$43.00 <br> Grande R$50.00, Família R$65.00</p>
+                  
+                </div>
+              </div>
+              </div>
+  
+
+            
+                        
+            
+          </main>
+    
+          </div>
+
+      <!-- dois sabores-->
+      <div class="p-4">
+
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> Escolha um sabor ou dois sabores</h2>
+        <label for="sabor-1" class="block text-lg font-semibold">Escolha o Sabor 1:</label>
+        <select id="sabor-1" class="mt-1 block w-full p-2 border rounded">
+          <option value="calabresa">Calabresa</option>
+          <option value="frango">Frango</option>
+          <option value="portuguesa">Portuguesa</option>
+          <option value="bacon">Bacon</option>
+          <option value="brocolis">Brócolis</option>
+        </select>
+      
+        <label for="sabor-2" class="block text-lg font-semibold mt-4">Escolha outra metade ou mantenha o mesmo sabor:</label>
+        <select id="sabor-2" class="mt-1 block w-full p-2 border rounded">
+          <option value="calabresa">Calabresa</option>
+          <option value="frango">Frango</option>
+          <option value="portuguesa">Portuguesa</option>
+          <option value="bacon">Bacon</option>
+          <option value="brocolis">Brócolis</option>
+        </select>
+      
+        <label for="tamanho" class="block text-lg font-semibold mt-4">Escolha o Tamanho:</label>
+        <select id="tamanho" class="mt-1 block w-full p-2 border rounded">
+          <option value="pequena">Pequena</option>
+          <option value="media">Média</option>
+          <option value="grande">Grande</option>
+          <option value="familia">Família</option>
+        </select>
+      
+        <button id="add-pizza-btn" class="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Adicionar ao Carrinho</button>
+      
+        <p id="flavor-warn" class="hidden text-red-500 mt-2">Selecione ambos os sabores e o tamanho!</p>
+      </div>
+      
+     
+
 
       <div class="mx-auto max-w-7xl px-2 my-2">
         <h2 class="font-bold text-3xl">Bebidas</h2>
@@ -240,7 +601,7 @@
       <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
         <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
-        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col max-h-64 overflow-y-auto"></div>
 
         <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
 
@@ -254,6 +615,17 @@
         <p class="text-red-500 hidden" id="address-warn">
           Digite seu endereço completo!
         </p>
+
+        <label for="payment-method" class="block font-medium mt-4">Escolha a forma de pagamento:</label>
+<select id="payment-method" class="border p-2 rounded w-full mt-2">
+  <option value="" disabled selected>Selecione uma opção</option>
+  <option value="PIX">PIX</option>
+  <option value="Cartão">Cartão</option>
+  <option value="Dinheiro em espécie">Dinheiro em espécie</option>
+</select>
+
+<p id="payment-warn" class="text-red-500 hidden mt-2">Selecione a forma de pagamento.</p>
+
 
         <div class="flex items-center justify-between mt-5 w-full">
           <button id="close-modal-btn">Fechar</button>
