@@ -1,5 +1,6 @@
 const menu = document.getElementById("menu")
 const bebidas = document.getElementById("bebidas")
+const prontas = document.getElementById("prontas")
 const cartBtn = document.getElementById("cart-btn")
 const cartModal = document.getElementById("cart-modal")
 const cartItemsContainer = document.getElementById("cart-items")
@@ -55,6 +56,18 @@ closeModalBtn.addEventListener("click", function () {
 })
 
 bebidas.addEventListener("click", function (event) {
+
+  let parentButton = event.target.closest(".add-to-cart-btn")
+
+  if (parentButton) {
+    const name = parentButton.getAttribute("data-name")
+    const price = parseFloat(parentButton.getAttribute("data-price"))
+    addToCart(name, price)
+
+  }
+})
+
+prontas.addEventListener("click", function (event) {
 
   let parentButton = event.target.closest(".add-to-cart-btn")
 
