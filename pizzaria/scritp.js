@@ -223,7 +223,7 @@ menu.addEventListener("click", function (event) {
     const higherPrice = Math.max(price1, price2);
 
     // Adiciona a pizza ao carrinho
-    addToCart(`${sabor1} / ${sabor2} - ${tamanho}`, higherPrice);
+    addCart(`${sabor1} / ${sabor2} - ${tamanho}`, higherPrice);
   }
 });
 
