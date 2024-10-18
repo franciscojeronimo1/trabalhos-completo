@@ -1,4 +1,5 @@
 const menu = document.getElementById("menu")
+const bebidas = document.getElementById("bebidas")
 const cartBtn = document.getElementById("cart-btn")
 const cartModal = document.getElementById("cart-modal")
 const cartItemsContainer = document.getElementById("cart-items")
@@ -11,9 +12,26 @@ const addressWarn = document.getElementById("address-warn")
 const pizzaPrices = {
   calabresa: { pequena: 40, media: 45, grande: 50, familia: 65 },
   frango: { pequena: 40, media: 45, grande: 50, familia: 65 },
-  portuguesa: { pequena: 43, media: 48, grande: 55, familia: 70 },
-  bacon: { pequena: 24, media: 34, grande: 44, familia: 54 },
-  brocolis: { pequena: 23, media: 33, grande: 43, familia: 53 }
+  portuguesatradicional: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  modadacasa: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  muçarela: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  portuguesacompleta: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  frangolino: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  canadense: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  brocoliscombacon: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  baconcompalmito: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  italiana: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  doisqueijos: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  tresqueijos: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  quatroqueijos: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  cincoqueijos: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  seisqueijos: { pequena: 43, media: 48, grande: 55, familia: 70 },
+  costela: { pequena: 45, media: 55, grande: 70, familia: 85 },
+  camarao: { pequena: 45, media: 55, grande: 70, familia: 85 },
+  vegana: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  brocolis: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  napolitana: { pequena: 40, media: 45, grande: 50, familia: 65 },
+  palmito: { pequena: 40, media: 45, grande: 50, familia: 65 }
 };
 
 
@@ -36,7 +54,7 @@ closeModalBtn.addEventListener("click", function () {
   cartModal.style.display = "none"
 })
 
-menu.addEventListener("click", function (event) {
+bebidas.addEventListener("click", function (event) {
 
   let parentButton = event.target.closest(".add-to-cart-btn")
 
@@ -44,6 +62,7 @@ menu.addEventListener("click", function (event) {
     const name = parentButton.getAttribute("data-name")
     const price = parseFloat(parentButton.getAttribute("data-price"))
     addToCart(name, price)
+
   }
 })
 
@@ -142,6 +161,21 @@ checkoutBtn.addEventListener("click", function () {
   const cartItems = cart.map((item) => {
     return `${item.name} (Qtd: ${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}`;
   }).join("\n");
+
+  /* if (!isOpen) {
+    Toastify({
+      text: "Ops o restaurante está fechado!",
+      duration: 3000,
+      close: true,
+      gravity: "top", // top or bottom
+      position: "right", // left, center or right
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "#ef4444",
+      },
+    }).showToast()
+    return;
+  } */
 
   if (cart.length === 0) return;
   if (addressInput.value === "") {

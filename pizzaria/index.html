@@ -30,7 +30,7 @@
 <body>
   <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
     <div class="w-full h-full flex flex-col justify-center items-center">
-      <img src="./assets/pizza.png" alt="Logo DevBurguer" class="w-32 h-32
+      <img src="./assets/pizza-1.jpg" alt="Logo DevBurguer" class="w-32 h-32
            rounded-full shadow-lg hover:scale-110 duration-200" />
       <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Claudia Delivery</h1>
 
@@ -50,7 +50,7 @@
 
 
   <!-- colocar um carrosel para mais variedades de sabores, usar 2xl:grid-cols-4 para deixar 4  ou para deixar 3 lg:grid-cols-3-->
-  <div id="menu">
+  <div>
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Tradicionais</h2>
     <main
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
@@ -154,7 +154,7 @@
 
 
 
-  <div id="menu">
+  <div>
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Bacon/Alho</h2>
     <main
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
@@ -269,7 +269,7 @@
   </div>
 
 
-  <div id="menu">
+  <div>
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Queijos</h2>
     <main
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
@@ -371,7 +371,7 @@
   </div>
 
 
-  <div id="menu">
+  <div>
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Carnes</h2>
     <main
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
@@ -416,7 +416,7 @@
 
   </div>
 
-  <div id="menu">
+  <div >
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 bg-white p-2">Vegetarianas</h2>
     <main
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
@@ -432,7 +432,7 @@
             Molho vermelho, Muçarela e alho poró.
           </p>
           <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold ">Pequena R$38.00, Média R$43.00 <br> Grande R$50.00, Família R$65.00</p>
+            <p class="font-bold ">Pequena R$40.00, Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
 
           </div>
         </div>
@@ -474,22 +474,6 @@
         </div>
       </div>
 
-      <!-- produtos-->
-      <div class="flex gap-2">
-        <img src="./assets/pizza.png" alt="Napolitana"
-          class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-
-        <div>
-          <p class="font-bold">Napolitana</p>
-          <p class="text-sm">
-            Molho vermelho, Muçarela, Tomate, Alho Frito e Creme de Queijo.
-          </p>
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold ">Pequena R$40.00, Média R$45.00 <br> Grande R$50.00, Família R$65.00</p>
-
-          </div>
-        </div>
-      </div>
 
       <!-- produtos-->
       <div class="flex gap-2">
@@ -509,33 +493,85 @@
       </div>
     </main>
 
+    
+
   </div>
 
   <!-- dois sabores-->
-  <div class="p-4">
+
+  <div id="menu" class="p-4">
 
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> Escolha um sabor ou dois sabores</h2>
     <label for="sabor-1" class="block text-lg font-semibold">Escolha o Sabor 1:</label>
     <select id="sabor-1" class="mt-1 block w-full p-2 border rounded">
+      <option value="" disabled selected>Selecione um sabor</option>
+      <option value="" disabled>Tradicionais</option>
       <option value="calabresa">Calabresa</option>
-      <option value="frango">Frango</option>
-      <option value="portuguesa">Portuguesa</option>
-      <option value="bacon">Bacon</option>
+      <option value="frango">Frango com Catupiry</option>
+      <option value="portuguesatradicional">Portuguesa Tradicional</option>
+      <option value="modadacasa">Moda da Casa</option>
+      <option value="muçarela">Muçarela</option>
+      <option value="" disabled>Bacon/Alho</option>
+      <option value="portuguesacompleta">Portuguesa Completa</option>
+      <option value="frangolino">Frangolino</option>
+      <option value="canadense">Canadense</option>
+      <option value="brocoliscombacon">Brocolis com Bacon</option>
+      <option value="baconcompalmito">Bacon com Palmito</option>
+      <option value="italiana">Italiana</option>
+      <option value="" disabled>Queijos</option>
+      <option value="doisqueijos">2 Queijos</option>
+      <option value="tresqueijos">3 Queijos</option>
+      <option value="quatroqueijos">4 Queijos</option>
+      <option value="cincoqueijos">5 Queijos</option>
+      <option value="seisqueijos">6 Queijos</option>
+      <option value="" disabled>Carnes</option>
+      <option value="costela">Costela</option>
+      <option value="camarao">Camarão</option>
+      <option value="" disabled>Vegetarianas</option>
+      <option value="vegana">Vegana</option>
       <option value="brocolis">Brócolis</option>
+      <option value="napolitana">Napolitana</option>
+      <option value="palmito">Palmito</option>
+
+
     </select>
 
     <label for="sabor-2" class="block text-lg font-semibold mt-4">Escolha outra metade ou mantenha o mesmo
       sabor:</label>
     <select id="sabor-2" class="mt-1 block w-full p-2 border rounded">
+      <option value="" disabled selected>Selecione um sabor</option>
+      <option value="" disabled>Tradicionais</option>
       <option value="calabresa">Calabresa</option>
-      <option value="frango">Frango</option>
-      <option value="portuguesa">Portuguesa</option>
-      <option value="bacon">Bacon</option>
+      <option value="frango">Frango com Catupiry</option>
+      <option value="portuguesatradicional">Portuguesa Tradicional</option>
+      <option value="modadacasa">Moda da Casa</option>
+      <option value="muçarela">Muçarela</option>
+      <option value="" disabled>Bacon/Alho</option>
+      <option value="portuguesacompleta">Portuguesa Completa</option>
+      <option value="frangolino">Frangolino</option>
+      <option value="canadense">Canadense</option>
+      <option value="brocoliscombacon">Brocolis com Bacon</option>
+      <option value="baconcompalmito">Bacon com Palmito</option>
+      <option value="italiana">Italiana</option>
+      <option value="" disabled>Queijos</option>
+      <option value="doisqueijos">2 Queijos</option>
+      <option value="tresqueijos">3 Queijos</option>
+      <option value="quatroqueijos">4 Queijos</option>
+      <option value="cincoqueijos">5 Queijos</option>
+      <option value="seisqueijos">6 Queijos</option>
+      <option value="" disabled>Carnes</option>
+      <option value="costela">Costela</option>
+      <option value="camarao">Camarão</option>
+      <option value="" disabled>Vegetarianas</option>
+      <option value="vegana">Vegana</option>
       <option value="brocolis">Brócolis</option>
+      <option value="napolitana">Napolitana</option>
+      <option value="palmito">Palmito</option>
     </select>
 
     <label for="tamanho" class="block text-lg font-semibold mt-4">Escolha o Tamanho:</label>
     <select id="tamanho" class="mt-1 block w-full p-2 border rounded">
+      <option value="" disabled selected>Selecione um Tamanho</option>
       <option value="pequena">Pequena</option>
       <option value="media">Média</option>
       <option value="grande">Grande</option>
@@ -550,26 +586,25 @@
 
 
 
-
   <div class="mx-auto max-w-7xl px-2 my-2">
     <h2 class="font-bold text-3xl">Bebidas</h2>
   </div>
 
   <!-- bebidas-->
-  <div
+  <div id="bebidas"
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16"
-    id="menu">
+    >
     <!-- bebidas-->
     <div class="flex gap-2 w-full">
-      <img src="./assets/refri-1.png" alt="Coca lata"
+      <img src="./assets/coca.png" alt="Coca 2L"
         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
       <div class="w-full">
-        <p class="font-bold">Coca lata</p>
+        <p class="font-bold">Coca 2L</p>
 
         <div class="flex items-center gap-2 justify-between mt-3">
-          <p class="font-bold text-lg">R$ 6</p>
-          <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata" data-price="6">
+          <p class="font-bold text-lg">R$ 14.00</p>
+          <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca 2L" data-price="14">
             <i class="fa fa-cart-plus text-lg text-white"></i>
           </button>
         </div>
@@ -578,22 +613,26 @@
 
     <!-- bebidas-->
     <div class="flex gap-2 w-full">
-      <img src="./assets/refri-2.png" alt="Guaraná lata"
+      <img src="./assets/kuat.png" alt="Kuat 2L"
         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
 
       <div class="w-full">
-        <p class="font-bold">Guaraná lata</p>
+        <p class="font-bold">Kuat 2L</p>
 
         <div class="flex items-center gap-2 justify-between mt-3">
-          <p class="font-bold text-lg">R$ 6</p>
-          <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guarana lata" data-price="6">
+          <p class="font-bold text-lg">R$ 10.00</p>
+          <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Kuat 2L" data-price="10">
             <i class="fa fa-cart-plus text-lg text-white"></i>
           </button>
         </div>
       </div>
     </div>
+    
   </div>
+  
   </div>
+  
+
 
   <!-- Modal Cart-->
   <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
@@ -621,6 +660,7 @@
 
       <p id="payment-warn" class="text-red-500 hidden mt-2">Selecione a forma de pagamento.</p>
 
+      
 
       <div class="flex items-center justify-between mt-5 w-full">
         <button id="close-modal-btn">Fechar</button>
@@ -631,12 +671,19 @@
     </div>
   </div>
 
+
+  
+
   <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
     <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
       (<span id="cart-count">0</span>) Veja meu carrinho
       <i class="fa fa-cart-plus text-lg text-white"></i>
     </button>
+
+
   </footer>
+
+
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="scritp.js"></script>
